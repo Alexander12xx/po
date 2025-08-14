@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alexander Portfolio</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .redirect-container {
+            text-align: center;
+            color: white;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .loading-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-top: 3px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .redirect-info {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Falexander6210back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body>
+    <div class="redirect-container">
+        <div class="logo">Alexander Portfolio</div>
+        <div class="loading-text">Initializing Quantum Interface...</div>
+        <div class="loading-spinner"></div>
+        <div class="redirect-info">Redirecting to homepage in 3 seconds</div>
+    </div>
+
+    <script>
+        // Redirect to the quantum landing homepage after 3 seconds
+        setTimeout(function() {
+            window.location.href = 'pages/quantum_landing_homepage.html';
+        }, 3000);
+        
+        // Optional: Allow immediate redirect on click
+        document.addEventListener('click', function() {
+            window.location.href = 'pages/quantum_landing_homepage.html';
+        });
+        
+        // Update loading text dynamically
+        let countdown = 3;
+        const countdownInterval = setInterval(function() {
+            countdown--;
+            if (countdown > 0) {
+                document.querySelector('.redirect-info').textContent = `Redirecting to homepage in ${countdown} seconds`;
+            } else {
+                document.querySelector('.redirect-info').textContent = 'Launching...';
+                clearInterval(countdownInterval);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Constellation - Portfolio Showcase | Alexander MM</title>
+    <meta name="description" content="Explore Alexander MM's project constellation - an interactive 3D showcase of cutting-edge web applications, e-commerce platforms, and innovative digital solutions." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Falexander6210back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background text-text-primary overflow-x-hidden">
+    <!-- Particle System Background -->
+    <canvas id="particleCanvas" class="fixed inset-0 w-full h-full z-0 pointer-events-none"></canvas>
+    
+    <!-- Floating Navigation -->
+    <nav id="floatingNav" class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-out">
+        <div class="bg-surface/20 backdrop-blur-md border border-primary/20 rounded-2xl px-6 py-3 shadow-glow-primary">
+            <div class="flex items-center space-x-8">
+                <a href="quantum_landing_homepage.html" class="text-primary font-inter-display font-semibold text-lg">
+                    Alexander MM
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="neural_about_personal_story.html" class="text-text-secondary hover:text-primary transition-fast">About</a>
+                    <a href="project_constellation_portfolio_showcase.html" class="text-primary font-medium">Projects</a>
+                    <a href="skill_nexus_technical_capabilities.html" class="text-text-secondary hover:text-primary transition-fast">Skills</a>
+                    <a href="innovation_vault_experimental_features.html" class="text-text-secondary hover:text-primary transition-fast">Lab</a>
+                    <a href="contact_portal_communication_interface.html" class="bg-primary text-background px-4 py-2 rounded-lg hover:bg-primary/90 transition-fast font-medium">
+                        Contact
+                    </a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-text-primary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-background/95 backdrop-blur-lg z-40 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="neural_about_personal_story.html" class="text-2xl text-text-secondary hover:text-primary transition-fast">About</a>
+            <a href="project_constellation_portfolio_showcase.html" class="text-2xl text-primary font-medium">Projects</a>
+            <a href="skill_nexus_technical_capabilities.html" class="text-2xl text-text-secondary hover:text-primary transition-fast">Skills</a>
+            <a href="innovation_vault_experimental_features.html" class="text-2xl text-text-secondary hover:text-primary transition-fast">Lab</a>
+            <a href="contact_portal_communication_interface.html" class="bg-primary text-background px-6 py-3 rounded-lg text-xl font-medium">
+                Contact
+            </a>
+        </div>
+    </div>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="fixed top-24 left-6 z-40 bg-surface/20 backdrop-blur-sm border border-primary/20 rounded-lg px-4 py-2">
+        <div class="flex items-center space-x-2 text-sm">
+            <a href="quantum_landing_homepage.html" class="text-text-muted hover:text-primary transition-fast">Home</a>
+            <svg class="w-4 h-4 text-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+            <span class="text-primary font-medium">Project Constellation</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center px-4 pt-32 pb-16 z-10">
+        <div class="text-center max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-inter-display font-bold text-gradient-primary mb-6">
+                Project Constellation
+            </h1>
+            <p class="text-xl md:text-2xl text-text-secondary mb-8 max-w-2xl mx-auto">
+                Navigate through an interactive universe of innovative digital solutions and cutting-edge web experiences
+            </p>
+            
+            <!-- Project Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div class="bg-surface/30 backdrop-blur-sm border border-primary/20 rounded-xl p-4">
+                    <div class="text-2xl font-bold text-primary mb-1">12+</div>
+                    <div class="text-sm text-text-muted">Projects Completed</div>
+                </div>
+                <div class="bg-surface/30 backdrop-blur-sm border border-accent/20 rounded-xl p-4">
+                    <div class="text-2xl font-bold text-accent mb-1">50K+</div>
+                    <div class="text-sm text-text-muted">Users Impacted</div>
+                </div>
+                <div class="bg-surface/30 backdrop-blur-sm border border-secondary/20 rounded-xl p-4">
+                    <div class="text-2xl font-bold text-secondary mb-1">98%</div>
+                    <div class="text-sm text-text-muted">Client Satisfaction</div>
+                </div>
+                <div class="bg-surface/30 backdrop-blur-sm border border-primary/20 rounded-xl p-4">
+                    <div class="text-2xl font-bold text-primary mb-1">24/7</div>
+                    <div class="text-sm text-text-muted">System Uptime</div>
+                </div>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="flex flex-wrap justify-center gap-3 mb-8">
+                <button class="filter-btn active bg-primary text-background px-6 py-3 rounded-xl font-medium transition-fast" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-btn bg-surface/30 backdrop-blur-sm border border-accent/20 text-accent px-6 py-3 rounded-xl font-medium hover:bg-accent/10 transition-fast" data-filter="web-apps">
+                    Web Applications
+                </button>
+                <button class="filter-btn bg-surface/30 backdrop-blur-sm border border-secondary/20 text-secondary px-6 py-3 rounded-xl font-medium hover:bg-secondary/10 transition-fast" data-filter="ecommerce">
+                    E-commerce
+                </button>
+                <button class="filter-btn bg-surface/30 backdrop-blur-sm border border-primary/20 text-primary px-6 py-3 rounded-xl font-medium hover:bg-primary/10 transition-fast" data-filter="apis">
+                    APIs & Backend
+                </button>
+                <button class="filter-btn bg-surface/30 backdrop-blur-sm border border-accent/20 text-accent px-6 py-3 rounded-xl font-medium hover:bg-accent/10 transition-fast" data-filter="mobile">
+                    Mobile Apps
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Project Constellation -->
+    <section class="relative py-16 px-4 z-10">
+        <div class="max-w-7xl mx-auto">
+            <!-- Desktop 3D Grid -->
+            <div id="projectConstellation" class="hidden md:block relative h-screen perspective-1000">
+                <div id="constellationContainer" class="transform-gpu transition-transform duration-500 preserve-3d">
+                    
+                    <!-- Project 1: NeoCommerce Platform -->
+                    <div class="project-card absolute w-80 h-96 cursor-pointer transform-gpu transition-all duration-500 hover:scale-105" data-category="ecommerce" data-project="neocommerce" style="transform: translate3d(100px, 50px, 0px) rotateY(15deg);">
+                        <div class="bg-surface/30 backdrop-blur-sm border border-primary/20 rounded-2xl overflow-hidden h-full hover:border-primary/50 hover:shadow-glow-primary transition-all duration-500">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="NeoCommerce Platform" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+                                <div class="absolute top-4 right-4 bg-accent/20 backdrop-blur-sm rounded-full px-3 py-1">
+                                    <span class="text-accent text-sm font-medium">Live</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-inter-display font-bold text-xl mb-3 text-primary">NeoCommerce Platform</h3>
+                                <p class="text-text-secondary mb-4 text-sm line-clamp-3">
+                                    Next-generation e-commerce platform with AI-powered recommendations and real-time inventory management.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs">React</span>
+                                    <span class="bg-accent/10 text-accent px-2 py-1 rounded-full text-xs">Node.js</span>
+                                    <span class="bg-secondary/10 text-secondary px-2 py-1 rounded-full text-xs">MongoDB</span>
+                                </div>
+                                <div class="text-xs text-text-muted">
+                                    <span>⚡ 98% Performance</span> • <span>👥 10K+ Users</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: AI Analytics Hub -->
+                    <div class="project-card absolute w-80 h-96 cursor-pointer transform-gpu transition-all duration-500 hover:scale-105" data-category="web-apps" data-project="ai-analytics" style="transform: translate3d(500px, 200px, -100px) rotateY(-20deg);">
+                        <div class="bg-surface/30 backdrop-blur-sm border border-secondary/20 rounded-2xl overflow-hidden h-full hover:border-secondary/50 hover:shadow-glow-secondary transition-all duration-500">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="AI Analytics Hub" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+                                <div class="absolute top-4 right-4 bg-secondary/20 backdrop-blur-sm rounded-full px-3 py-1">
+                                    <span class="text-secondary text-sm font-medium">Beta</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-inter-display font-bold text-xl mb-3 text-secondary">AI Analytics Hub</h3>
+                                <p class="text-text-secondary mb-4 text-sm line-clamp-3">
+                                    Intelligent data visualization platform with machine learning insights and predictive analytics.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-secondary/10 text-secondary px-2 py-1 rounded-full text-xs">Python</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs">React</span>
+                                    <span class="bg-accent/10 text-accent px-2 py-1 rounded-full text-xs">TensorFlow</span>
+                                </div>
+                                <div class="text-xs text-text-muted">
+                                    <span>🤖 AI-Powered</span> • <span>📊 Real-time</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: DeFi Trading Platform -->
+                    <div class="project-card absolute w-80 h-96 cursor-pointer transform-gpu transition-all duration-500 hover:scale-105" data-category="web-apps" data-project="defi-platform" style="transform: translate3d(900px, 100px, 50px) rotateY(10deg);">
+                        <div class="bg-surface/30 backdrop-blur-sm border border-accent/20 rounded-2xl overflow-hidden h-full hover:border-accent/50 hover:shadow-glow-accent transition-all duration-500">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.pixabay.com/photo/2018/01/18/07/31/bitcoin-3089728_1280.jpg" alt="DeFi Trading Platform" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+                                <div class="absolute top-4 right-4 bg-accent/20 backdrop-blur-sm rounded-full px-3 py-1">
+                                    <span class="text-accent text-sm font-medium">New</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-inter-display font-bold text-xl mb-3 text-accent">DeFi Trading Platform</h3>
+                                <p class="text-text-secondary mb-4 text-sm line-clamp-3">
+                                    Decentralized finance platform with smart contract integration and automated trading algorithms.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-accent/10 text-accent px-2 py-1 rounded-full text-xs">Solidity</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs">Web3.js</span>
+                                    <span class="bg-secondary/10 text-secondary px-2 py-1 rounded-full text-xs">Next.js</span>
+                                </div>
+                                <div class="text-xs text-text-muted">
+                                    <span>🔐 Secure</span> • <span>⚡ Fast Trades</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: CloudSync API -->
+                    <div class="project-card absolute w-80 h-96 cursor-pointer transform-gpu transition-all duration-500 hover:scale-105" data-category="apis" data-project="cloudsync-api" style="transform: translate3d(300px, 400px, -50px) rotateY(-10deg);">
+                        <div class="bg-surface/30 backdrop-blur-sm border border-primary/20 rounded-2xl overflow-hidden h-full hover:border-primary/50 hover:shadow-glow-primary transition-all duration-500">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3" alt="CloudSync API" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+                                <div class="absolute top-4 right-4 bg-primary/20 backdrop-blur-sm rounded-full px-3 py-1">
+                                    <span class="text-primary text-sm font-medium">API</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-inter-display font-bold text-xl mb-3 text-primary">CloudSync API</h3>
+                                <p class="text-text-secondary mb-4 text-sm line-clamp-3">
+                                    High-performance REST API with real-time synchronization and enterprise-grade security.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs">Node.js</span>
+                                    <span class="bg-accent/10 text-accent px-2 py-1 rounded-full text-xs">GraphQL</span>
+                                    <span class="bg-secondary/10 text-secondary px-2 py-1 rounded-full text-xs">Redis</span>
+                                </div>
+                                <div class="text-xs text-text-muted">
+                                    <span>🚀 99.9% Uptime</span> • <span>⚡ <50ms Response</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: MobileFirst App -->
+                    <div class="project-card absolute w-80 h-96 cursor-pointer transform-gpu transition-all duration-500 hover:scale-105" data-category="mobile" data-project="mobilefirst-app" style="transform: translate3d(700px, 450px, 100px) rotateY(25deg);">
+                        <div class="bg-surface/30 backdrop-blur-sm border border-accent/20 rounded-2xl overflow-hidden h-full hover:border-accent/50 hover:shadow-glow-accent transition-all duration-500">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="MobileFirst App" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+                                <div class="absolute top-4 right-4 bg-accent/20 backdrop-blur-sm rounded-full px-3 py-1">
+                                    <span class="text-accent text-sm font-medium">Mobile</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-inter-display font-bold text-xl mb-3 text-accent">MobileFirst App</h3>
+                                <p class="text-text-secondary mb-4 text-sm line-clamp-3">
+                                    Cross-platform mobile application with offline capabilities and push notifications.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-accent/10 text-accent px-2 py-1 rounded-full text-xs">React Native</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs">Firebase</span>
+                                    <span class="bg-secondary/10 text-secondary px-2 py-1 rounded-full text-xs">Redux</span>
+                                </div>
+                                <div class="text-xs text-text-muted">
+                                    <span>📱 Cross-Platform</span> • <span>⚡ Offline Ready</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: RetailPro Dashboard -->
+                    <div class="project-card absolute w-80 h-96 cursor-pointer transform-gpu transition-all duration-500 hover:scale-105" data-category="ecommerce" data-project="retailpro-dashboard" style="transform: translate3d(100px, 300px, -150px) rotateY(-30deg);">
+                        <div class="bg-surface/30 backdrop-blur-sm border border-secondary/20 rounded-2xl overflow-hidden h-full hover:border-secondary/50 hover:shadow-glow-secondary transition-all duration-500">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.pixabay.com/photo/2016/11/27/21/42/stock-1863880_1280.jpg" alt="RetailPro Dashboard" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+                                <div class="absolute top-4 right-4 bg-secondary/20 backdrop-blur-sm rounded-full px-3 py-1">
+                                    <span class="text-secondary text-sm font-medium">Dashboard</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-inter-display font-bold text-xl mb-3 text-secondary">RetailPro Dashboard</h3>
+                                <p class="text-text-secondary mb-4 text-sm line-clamp-3">
+                                    Comprehensive retail management system with inventory tracking and sales analytics.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-secondary/10 text-secondary px-2 py-1 rounded-full text-xs">Vue.js</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs">Laravel</span>
+                                    <span class="bg-accent/10 text-accent px-2 py-1 rounded-full text-xs">MySQL</span>
+                                </div>
+                                <div class="text-xs text-text-muted">
+                                    <span>📊 Analytics</span> • <span>🏪 Multi-Store</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Mobile Carousel -->
+            <div id="mobileCarousel" class="md:hidden">
+                <div class="swiper-container overflow-hidden">
+                    <div class="swiper-wrapper flex transition-transform duration-300">
+                        <!-- Mobile project cards will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="flex justify-center mt-6 space-x-2">
+                    <button class="carousel-dot w-3 h-3 rounded-full bg-primary transition-fast"></button>
+                    <button class="carousel-dot w-3 h-3 rounded-full bg-surface transition-fast"></button>
+                    <button class="carousel-dot w-3 h-3 rounded-full bg-surface transition-fast"></button>
+                    <button class="carousel-dot w-3 h-3 rounded-full bg-surface transition-fast"></button>
+                    <button class="carousel-dot w-3 h-3 rounded-full bg-surface transition-fast"></button>
+                    <button class="carousel-dot w-3 h-3 rounded-full bg-surface transition-fast"></button>
+                </div>
+            </div>
+
+            <!-- 3D Controls -->
+            <div class="hidden md:block fixed bottom-8 right-8 z-30">
+                <div class="bg-surface/30 backdrop-blur-sm border border-primary/20 rounded-xl p-4">
+                    <div class="text-sm text-text-muted mb-2">3D Controls</div>
+                    <div class="space-y-2 text-xs text-text-secondary">
+                        <div>🖱️ Drag to rotate</div>
+                        <div>🔍 Scroll to zoom</div>
+                        <div>👆 Click to explore</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Modal -->
+    <div id="caseStudyModal" class="fixed inset-0 bg-background/95 backdrop-blur-lg z-60 opacity-0 pointer-events-none transition-all duration-500">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-surface/30 backdrop-blur-sm border border-primary/20 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-8">
+                    <!-- Modal Header -->
+                    <div class="flex items-center justify-between mb-8">
+                        <div>
+                            <h2 id="modalTitle" class="text-3xl font-inter-display font-bold text-gradient-primary mb-2"></h2>
+                            <p id="modalSubtitle" class="text-text-secondary"></p>
+                        </div>
+                        <button id="closeModal" class="text-text-muted hover:text-primary transition-fast">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Modal Content -->
+                    <div id="modalContent" class="space-y-8">
+                        <!-- Content will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="relative py-16 px-4 border-t border-surface z-10">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="font-inter-display font-bold text-xl text-gradient-primary mb-4">Alexander MM</h3>
+                    <p class="text-text-secondary mb-4">Engineering tomorrow's web experiences with cutting-edge technology and innovative design.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com" class="text-text-muted hover:text-primary transition-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com" class="text-text-muted hover:text-primary transition-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com" class="text-text-muted hover:text-primary transition-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-inter-display font-semibold text-lg mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="neural_about_personal_story.html" class="block text-text-secondary hover:text-primary transition-fast">About Me</a>
+                        <a href="project_constellation_portfolio_showcase.html" class="block text-primary font-medium">Portfolio</a>
+                        <a href="skill_nexus_technical_capabilities.html" class="block text-text-secondary hover:text-primary transition-fast">Skills</a>
+                        <a href="innovation_vault_experimental_features.html" class="block text-text-secondary hover:text-primary transition-fast">Lab</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-inter-display font-semibold text-lg mb-4">Get In Touch</h4>
+                    <div class="space-y-2 text-text-secondary">
+                        <p>Ready to build something amazing?</p>
+                        <a href="contact_portal_communication_interface.html" class="inline-block bg-primary text-background px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-fast">
+                            Start a Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-surface pt-8 text-center text-text-muted">
+                <p>&copy; 2025 Alexander MM. All rights reserved. Crafted with passion and precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Project data
+        const projectData = {
+            'neocommerce': {
+                title: 'NeoCommerce Platform',
+                subtitle: 'Next-Generation E-commerce Solution',
+                category: 'ecommerce',
+                image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3',
+                description: 'A revolutionary e-commerce platform that combines AI-powered recommendations with seamless user experience and enterprise-grade performance.',
+                problem: 'Traditional e-commerce platforms struggle with personalization, performance, and scalability. Customers face generic experiences while businesses lose revenue due to poor conversion rates.',
+                solution: 'Built a modern, AI-driven platform using React and Node.js with real-time inventory management, personalized recommendations, and optimized checkout flows.',
+                technologies: ['React', 'Node.js', 'MongoDB', 'Redis', 'AWS', 'Stripe API'],
+                metrics: {
+                    performance: '98% Lighthouse Score',
+                    users: '10,000+ Active Users',
+                    conversion: '35% Increase in Conversion',
+                    uptime: '99.9% Uptime'
+                },
+                features: [
+                    'AI-powered product recommendations',
+                    'Real-time inventory synchronization',
+                    'Advanced search with filters',
+                    'Multi-payment gateway integration',
+                    'Mobile-responsive design',
+                    'Admin dashboard with analytics'
+                ],
+                testimonial: {
+                    text: "Alexander delivered an exceptional e-commerce platform that exceeded our expectations. The AI recommendations alone increased our sales by 35%.",
+                    author: "Sarah Johnson",
+                    role: "CEO, TechRetail Inc."
+                },
+                timeline: '3 months development',
+                liveUrl: 'https://neocommerce-demo.com',
+                githubUrl: 'https://github.com/alexandermm/neocommerce'
+            },
+            'ai-analytics': {
+                title: 'AI Analytics Hub',
+                subtitle: 'Intelligent Data Visualization Platform',
+                category: 'web-apps',
+                image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                description: 'An advanced analytics platform that transforms complex data into actionable insights using machine learning and interactive visualizations.',
+                problem: 'Businesses struggle to make sense of their data due to complex analytics tools and lack of predictive insights.',
+                solution: 'Developed an intuitive platform with ML-powered insights, real-time dashboards, and predictive analytics capabilities.',
+                technologies: ['Python', 'React', 'TensorFlow', 'D3.js', 'PostgreSQL', 'Docker'],
+                metrics: {
+                    accuracy: '94% Prediction Accuracy',
+                    processing: '10M+ Data Points/Hour',
+                    insights: '500+ Automated Insights',
+                    satisfaction: '96% User Satisfaction'
+                },
+                features: [
+                    'Machine learning predictions',
+                    'Interactive data visualizations',
+                    'Real-time dashboard updates',
+                    'Custom report generation',
+                    'API integration capabilities',
+                    'Role-based access control'
+                ],
+                testimonial: {
+                    text: "The AI Analytics Hub transformed how we understand our business data. The predictive insights have been game-changing.",
+                    author: "Michael Chen",
+                    role: "Data Director, Analytics Corp"
+                },
+                timeline: '4 months development',
+                liveUrl: 'https://ai-analytics-demo.com',
+                githubUrl: 'https://github.com/alexandermm/ai-analytics'
+            },
+            'defi-platform': {
+                title: 'DeFi Trading Platform',
+                subtitle: 'Decentralized Finance Solution',
+                category: 'web-apps',
+                image: 'https://images.pixabay.com/photo/2018/01/18/07/31/bitcoin-3089728_1280.jpg',
+                description: 'A secure decentralized finance platform enabling users to trade, stake, and manage cryptocurrency assets with advanced security features.',
+                problem: 'Centralized exchanges pose security risks and lack transparency. Users need a trustworthy DeFi platform with advanced trading features.',
+                solution: 'Built a decentralized platform using smart contracts with automated trading algorithms and comprehensive security measures.',
+                technologies: ['Solidity', 'Web3.js', 'Next.js', 'Ethereum', 'IPFS', 'MetaMask'],
+                metrics: {
+                    security: '100% Security Audit Pass',
+                    volume: '$2M+ Trading Volume',
+                    transactions: '50,000+ Transactions',
+                    gas: '40% Gas Optimization'
+                },
+                features: [
+                    'Smart contract integration',
+                    'Automated trading algorithms',
+                    'Multi-wallet connectivity',
+                    'Yield farming capabilities',
+                    'Liquidity pool management',
+                    'Advanced security protocols'
+                ],
+                testimonial: {
+                    text: "Alexander's DeFi platform combines security with usability perfectly. The trading algorithms have significantly improved our returns.",
+                    author: "David Rodriguez",
+                    role: "Founder, CryptoTrade Pro"
+                },
+                timeline: '5 months development',
+                liveUrl: 'https://defi-platform-demo.com',
+                githubUrl: 'https://github.com/alexandermm/defi-platform'
+            },
+            'cloudsync-api': {
+                title: 'CloudSync API',
+                subtitle: 'High-Performance REST API',
+                category: 'apis',
+                image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3',
+                description: 'Enterprise-grade REST API with real-time synchronization capabilities, built for high-performance applications requiring instant data updates.',
+                problem: 'Applications need real-time data synchronization with high availability and low latency for optimal user experience.',
+                solution: 'Developed a robust API architecture with WebSocket integration, caching strategies, and horizontal scaling capabilities.',
+                technologies: ['Node.js', 'GraphQL', 'Redis', 'WebSocket', 'MongoDB', 'Docker'],
+                metrics: {
+                    uptime: '99.9% Uptime',
+                    response: '<50ms Response Time',
+                    throughput: '10,000+ Requests/Second',
+                    availability: '24/7 Availability'
+                },
+                features: [
+                    'RESTful API design',
+                    'Real-time WebSocket connections',
+                    'Advanced caching strategies',
+                    'Rate limiting and throttling',
+                    'Comprehensive documentation',
+                    'Monitoring and analytics'
+                ],
+                testimonial: {
+                    text: "The CloudSync API has been incredibly reliable. The real-time features work flawlessly and the documentation is excellent.",
+                    author: "Lisa Wang",
+                    role: "CTO, SyncTech Solutions"
+                },
+                timeline: '2 months development',
+                liveUrl: 'https://cloudsync-api-demo.com',
+                githubUrl: 'https://github.com/alexandermm/cloudsync-api'
+            },
+            'mobilefirst-app': {
+                title: 'MobileFirst App',
+                subtitle: 'Cross-Platform Mobile Application',
+                category: 'mobile',
+                image: 'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                description: 'A feature-rich cross-platform mobile application with offline capabilities, push notifications, and seamless user experience.',
+                problem: 'Businesses need mobile apps that work across platforms while providing native-like performance and offline functionality.',
+                solution: 'Created a React Native application with offline-first architecture, push notifications, and platform-specific optimizations.',
+                technologies: ['React Native', 'Firebase', 'Redux', 'AsyncStorage', 'Push Notifications', 'Expo'],
+                metrics: {
+                    platforms: '2 Platforms (iOS/Android)',
+                    downloads: '25,000+ Downloads',
+                    rating: '4.8/5 App Store Rating',
+                    retention: '85% User Retention'
+                },
+                features: [
+                    'Cross-platform compatibility',
+                    'Offline data synchronization',
+                    'Push notification system',
+                    'Biometric authentication',
+                    'In-app purchases',
+                    'Social media integration'
+                ],
+                testimonial: {
+                    text: "The MobileFirst app exceeded our expectations. Users love the offline functionality and the app performs beautifully on both platforms.",
+                    author: "James Thompson",
+                    role: "Product Manager, MobileInnovate"
+                },
+                timeline: '4 months development',
+                liveUrl: 'https://mobilefirst-demo.com',
+                githubUrl: 'https://github.com/alexandermm/mobilefirst-app'
+            },
+            'retailpro-dashboard': {
+                title: 'RetailPro Dashboard',
+                subtitle: 'Comprehensive Retail Management System',
+                category: 'ecommerce',
+                image: 'https://images.pixabay.com/photo/2016/11/27/21/42/stock-1863880_1280.jpg',
+                description: 'A comprehensive retail management system with inventory tracking, sales analytics, and multi-store management capabilities.',
+                problem: 'Retail businesses struggle with inventory management across multiple locations and lack comprehensive sales analytics.',
+                solution: 'Built an integrated dashboard system with real-time inventory tracking, advanced analytics, and multi-store management.',
+                technologies: ['Vue.js', 'Laravel', 'MySQL', 'Chart.js', 'WebSocket', 'AWS'],
+                metrics: {
+                    stores: '50+ Stores Managed',
+                    inventory: '100,000+ Products Tracked',
+                    efficiency: '60% Efficiency Improvement',
+                    accuracy: '99.5% Inventory Accuracy'
+                },
+                features: [
+                    'Multi-store inventory management',
+                    'Real-time sales analytics',
+                    'Automated reorder alerts',
+                    'Customer relationship management',
+                    'Financial reporting tools',
+                    'Staff management system'
+                ],
+                testimonial: {
+                    text: "RetailPro Dashboard revolutionized our operations. We now have complete visibility across all our stores with accurate real-time data.",
+                    author: "Maria Garcia",
+                    role: "Operations Director, RetailChain Plus"
+                },
+                timeline: '6 months development',
+                liveUrl: 'https://retailpro-demo.com',
+                githubUrl: 'https://github.com/alexandermm/retailpro-dashboard'
+            }
+        };
+
+        // Particle System (reused from homepage)
+        class ParticleSystem {
+            constructor() {
+                this.canvas = document.getElementById('particleCanvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.particles = [];
+                this.mouse = { x: 0, y: 0 };
+                this.init();
+            }
+
+            init() {
+                this.resize();
+                this.createParticles();
+                this.bindEvents();
+                this.animate();
+            }
+
+            resize() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+            }
+
+            createParticles() {
+                const particleCount = Math.min(80, Math.floor(window.innerWidth / 25));
+                for (let i = 0; i < particleCount; i++) {
+                    this.particles.push({
+                        x: Math.random() * this.canvas.width,
+                        y: Math.random() * this.canvas.height,
+                        vx: (Math.random() - 0.5) * 0.3,
+                        vy: (Math.random() - 0.5) * 0.3,
+                        size: Math.random() * 2 + 1,
+                        color: Math.random() > 0.6 ? '#00D4FF' : Math.random() > 0.3 ? '#8B5CF6' : '#00FF88',
+                        opacity: Math.random() * 0.4 + 0.1
+                    });
+                }
+            }
+
+            bindEvents() {
+                window.addEventListener('resize', () => this.resize());
+                window.addEventListener('mousemove', (e) => {
+                    this.mouse.x = e.clientX;
+                    this.mouse.y = e.clientY;
+                });
+            }
+
+            animate() {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                this.particles.forEach(particle => {
+                    // Mouse interaction
+                    const dx = this.mouse.x - particle.x;
+                    const dy = this.mouse.y - particle.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 100) {
+                        const force = (100 - distance) / 100;
+                        particle.vx += dx * force * 0.00005;
+                        particle.vy += dy * force * 0.00005;
+                    }
+
+                    // Update position
+                    particle.x += particle.vx;
+                    particle.y += particle.vy;
+
+                    // Boundary check
+                    if (particle.x < 0 || particle.x > this.canvas.width) particle.vx *= -1;
+                    if (particle.y < 0 || particle.y > this.canvas.height) particle.vy *= -1;
+
+                    // Draw particle
+                    this.ctx.beginPath();
+                    this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                    this.ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
+                    this.ctx.fill();
+                });
+
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+
+        // 3D Constellation Controller
+        class ConstellationController {
+            constructor() {
+                this.container = document.getElementById('constellationContainer');
+                this.isDragging = false;
+                this.previousMousePosition = { x: 0, y: 0 };
+                this.rotation = { x: 0, y: 0 };
+                this.scale = 1;
+                this.init();
+            }
+
+            init() {
+                this.bindEvents();
+                this.updateTransform();
+            }
+
+            bindEvents() {
+                const constellation = document.getElementById('projectConstellation');
+                
+                constellation.addEventListener('mousedown', (e) => {
+                    this.isDragging = true;
+                    this.previousMousePosition = { x: e.clientX, y: e.clientY };
+                    constellation.style.cursor = 'grabbing';
+                });
+
+                document.addEventListener('mousemove', (e) => {
+                    if (!this.isDragging) return;
+                    
+                    const deltaX = e.clientX - this.previousMousePosition.x;
+                    const deltaY = e.clientY - this.previousMousePosition.y;
+                    
+                    this.rotation.y += deltaX * 0.5;
+                    this.rotation.x -= deltaY * 0.5;
+                    
+                    this.previousMousePosition = { x: e.clientX, y: e.clientY };
+                    this.updateTransform();
+                });
+
+                document.addEventListener('mouseup', () => {
+                    this.isDragging = false;
+                    document.getElementById('projectConstellation').style.cursor = 'grab';
+                });
+
+                constellation.addEventListener('wheel', (e) => {
+                    e.preventDefault();
+                    this.scale += e.deltaY * -0.001;
+                    this.scale = Math.min(Math.max(0.5, this.scale), 2);
+                    this.updateTransform();
+                });
+            }
+
+            updateTransform() {
+                this.container.style.transform = `
+                    rotateX(${this.rotation.x}deg) 
+                    rotateY(${this.rotation.y}deg) 
+                    scale(${this.scale})
+                `;
+            }
+        }
+
+        // Filter System
+        class FilterSystem {
+            constructor() {
+                this.activeFilter = 'all';
+                this.init();
+            }
+
+            init() {
+                const filterButtons = document.querySelectorAll('.filter-btn');
+                filterButtons.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const filter = e.target.dataset.filter;
+                        this.setActiveFilter(filter);
+                        this.filterProjects(filter);
+                    });
+                });
+            }
+
+            setActiveFilter(filter) {
+                this.activeFilter = filter;
+                
+                // Update button states
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active', 'bg-primary', 'text-background');
+                    btn.classList.add('bg-surface/30', 'backdrop-blur-sm', 'border');
+                    
+                    if (btn.dataset.filter === filter) {
+                        btn.classList.add('active', 'bg-primary', 'text-background');
+                        btn.classList.remove('bg-surface/30', 'backdrop-blur-sm', 'border');
+                    }
+                });
+            }
+
+            filterProjects(filter) {
+                const projectCards = document.querySelectorAll('.project-card');
+                
+                projectCards.forEach(card => {
+                    const category = card.dataset.category;
+                    const shouldShow = filter === 'all' || category === filter;
+                    
+                    if (shouldShow) {
+                        card.style.opacity = '1';
+                        card.style.transform = card.style.transform.replace('scale(0)', 'scale(1)');
+                        card.style.pointerEvents = 'auto';
+                    } else {
+                        card.style.opacity = '0.3';
+                        card.style.transform = card.style.transform + ' scale(0.8)';
+                        card.style.pointerEvents = 'none';
+                    }
+                });
+            }
+        }
+
+        // Case Study Modal
+        class CaseStudyModal {
+            constructor() {
+                this.modal = document.getElementById('caseStudyModal');
+                this.modalTitle = document.getElementById('modalTitle');
+                this.modalSubtitle = document.getElementById('modalSubtitle');
+                this.modalContent = document.getElementById('modalContent');
+                this.closeBtn = document.getElementById('closeModal');
+                this.init();
+            }
+
+            init() {
+                // Bind project card clicks
+                document.querySelectorAll('.project-card').forEach(card => {
+                    card.addEventListener('click', () => {
+                        const projectId = card.dataset.project;
+                        this.openModal(projectId);
+                    });
+                });
+
+                // Bind close events
+                this.closeBtn.addEventListener('click', () => this.closeModal());
+                this.modal.addEventListener('click', (e) => {
+                    if (e.target === this.modal) this.closeModal();
+                });
+
+                // Bind escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && !this.modal.classList.contains('pointer-events-none')) {
+                        this.closeModal();
+                    }
+                });
+            }
+
+            openModal(projectId) {
+                const project = projectData[projectId];
+                if (!project) return;
+
+                this.modalTitle.textContent = project.title;
+                this.modalSubtitle.textContent = project.subtitle;
+                this.populateContent(project);
+
+                this.modal.classList.remove('opacity-0', 'pointer-events-none');
+                this.modal.classList.add('opacity-100');
+                document.body.style.overflow = 'hidden';
+            }
+
+            closeModal() {
+                this.modal.classList.add('opacity-0', 'pointer-events-none');
+                this.modal.classList.remove('opacity-100');
+                document.body.style.overflow = 'auto';
+            }
+
+            populateContent(project) {
+                this.modalContent.innerHTML = `
+                    <!-- Project Image -->
+                    <div class="relative h-64 rounded-xl overflow-hidden mb-8">
+                        <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+                    </div>
+
+                    <!-- Project Description -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-inter-display font-semibold mb-4 text-primary">Project Overview</h3>
+                        <p class="text-text-secondary leading-relaxed">${project.description}</p>
+                    </div>
+
+                    <!-- Problem & Solution -->
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div class="bg-surface/20 rounded-xl p-6">
+                            <h4 class="text-lg font-inter-display font-semibold mb-3 text-accent">The Challenge</h4>
+                            <p class="text-text-secondary text-sm leading-relaxed">${project.problem}</p>
+                        </div>
+                        <div class="bg-surface/20 rounded-xl p-6">
+                            <h4 class="text-lg font-inter-display font-semibold mb-3 text-secondary">The Solution</h4>
+                            <p class="text-text-secondary text-sm leading-relaxed">${project.solution}</p>
+                        </div>
+                    </div>
+
+                    <!-- Technologies -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-inter-display font-semibold mb-4 text-primary">Tech Stack</h3>
+                        <div class="flex flex-wrap gap-3">
+                            ${project.technologies.map(tech => `
+                                <span class="bg-primary/10 text-primary px-4 py-2 rounded-lg font-medium">${tech}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Key Metrics -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-inter-display font-semibold mb-4 text-primary">Key Metrics</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            ${Object.entries(project.metrics).map(([key, value]) => `
+                                <div class="bg-surface/20 rounded-xl p-4 text-center">
+                                    <div class="text-lg font-bold text-accent mb-1">${value}</div>
+                                    <div class="text-xs text-text-muted capitalize">${key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-inter-display font-semibold mb-4 text-primary">Key Features</h3>
+                        <div class="grid md:grid-cols-2 gap-3">
+                            ${project.features.map(feature => `
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                    <span class="text-text-secondary text-sm">${feature}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Code Snippet Example -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-inter-display font-semibold mb-4 text-primary">Code Highlight</h3>
+                        <div class="bg-surface/40 rounded-xl p-6 font-jetbrains-mono text-sm">
+                            <div class="text-accent mb-2">// ${project.technologies[0]} Implementation</div>
+                            <div class="text-text-secondary">
+                                <span class="text-secondary">const</span> <span class="text-primary">optimizePerformance</span> = <span class="text-accent">async</span> () => {<br>
+                                &nbsp;&nbsp;<span class="text-secondary">const</span> <span class="text-primary">result</span> = <span class="text-secondary">await</span> <span class="text-accent">processData</span>();<br>
+                                &nbsp;&nbsp;<span class="text-secondary">return</span> <span class="text-primary">result</span>.<span class="text-accent">optimize</span>();<br>
+                                };
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Client Testimonial -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-inter-display font-semibold mb-4 text-primary">Client Feedback</h3>
+                        <div class="bg-surface/20 rounded-xl p-6">
+                            <div class="text-text-secondary italic mb-4">"${project.testimonial.text}"</div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                                    <span class="text-primary font-semibold">${project.testimonial.author.charAt(0)}</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-text-primary">${project.testimonial.author}</div>
+                                    <div class="text-sm text-text-muted">${project.testimonial.role}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Links -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="${project.liveUrl}" target="_blank" 
+                           class="bg-primary text-background px-6 py-3 rounded-xl font-semibold hover:bg-primary/90 transition-fast text-center">
+                            View Live Demo
+                        </a>
+                        <a href="${project.githubUrl}" target="_blank" 
+                           class="border border-primary text-primary px-6 py-3 rounded-xl font-semibold hover:bg-primary/10 transition-fast text-center">
+                            View Source Code
+                        </a>
+                    </div>
+                `;
+            }
+        }
+
+        // Mobile Carousel
+        class MobileCarousel {
+            constructor() {
+                this.currentSlide = 0;
+                this.totalSlides = 6;
+                this.init();
+            }
+
+            init() {
+                this.populateMobileCards();
+                this.bindEvents();
+                this.updateDots();
+            }
+
+            populateMobileCards() {
+                const wrapper = document.querySelector('.swiper-wrapper');
+                const projects = Object.entries(projectData);
+                
+                wrapper.innerHTML = projects.map(([id, project]) => `
+                    <div class="swiper-slide min-w-full px-4" data-project="${id}">
+                        <div class="bg-surface/30 backdrop-blur-sm border border-primary/20 rounded-2xl overflow-hidden cursor-pointer hover:border-primary/50 transition-all duration-300">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-inter-display font-bold text-xl mb-3 text-primary">${project.title}</h3>
+                                <p class="text-text-secondary mb-4 text-sm">${project.description.substring(0, 120)}...</p>
+                                <div class="flex flex-wrap gap-2">
+                                    ${project.technologies.slice(0, 3).map(tech => `
+                                        <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs">${tech}</span>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+
+                // Bind click events for mobile cards
+                wrapper.querySelectorAll('.swiper-slide').forEach(slide => {
+                    slide.addEventListener('click', () => {
+                        const projectId = slide.dataset.project;
+                        new CaseStudyModal().openModal(projectId);
+                    });
+                });
+            }
+
+            bindEvents() {
+                const wrapper = document.querySelector('.swiper-wrapper');
+                const dots = document.querySelectorAll('.carousel-dot');
+                
+                let startX = 0;
+                let currentX = 0;
+                let isDragging = false;
+
+                wrapper.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    isDragging = true;
+                });
+
+                wrapper.addEventListener('touchmove', (e) => {
+                    if (!isDragging) return;
+                    currentX = e.touches[0].clientX;
+                });
+
+                wrapper.addEventListener('touchend', () => {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    
+                    const diff = startX - currentX;
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0 && this.currentSlide < this.totalSlides - 1) {
+                            this.currentSlide++;
+                        } else if (diff < 0 && this.currentSlide > 0) {
+                            this.currentSlide--;
+                        }
+                        this.updateSlide();
+                    }
+                });
+
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        this.currentSlide = index;
+                        this.updateSlide();
+                    });
+                });
+            }
+
+            updateSlide() {
+                const wrapper = document.querySelector('.swiper-wrapper');
+                wrapper.style.transform = `translateX(-${this.currentSlide * 100}%)`;
+                this.updateDots();
+            }
+
+            updateDots() {
+                document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                    dot.classList.toggle('bg-primary', index === this.currentSlide);
+                    dot.classList.toggle('bg-surface', index !== this.currentSlide);
+                });
+            }
+        }
+
+        // Navigation scroll effect
+        function handleNavigation() {
+            const nav = document.getElementById('floatingNav');
+            let lastScrollY = window.scrollY;
+
+            window.addEventListener('scroll', () => {
+                const currentScrollY = window.scrollY;
+                
+                if (currentScrollY > 100) {
+                    nav.style.transform = 'translateX(-50%) translateY(-10px)';
+                    nav.style.opacity = '0.95';
+                } else {
+                    nav.style.transform = 'translateX(-50%) translateY(0)';
+                    nav.style.opacity = '1';
+                }
+
+                lastScrollY = currentScrollY;
+            });
+        }
+
+        // Mobile menu
+        function initMobileMenu() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('opacity-0')) {
+                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.add('opacity-100');
+                } else {
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.remove('opacity-100');
+                }
+            });
+
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.remove('opacity-100');
+                }
+            });
+        }
+
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', () => {
+            new ParticleSystem();
+            new ConstellationController();
+            new FilterSystem();
+            new CaseStudyModal();
+            new MobileCarousel();
+            handleNavigation();
+            initMobileMenu();
+        });
+    </script>
+
+    <style>
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        
+        .preserve-3d {
+            transform-style: preserve-3d;
+        }
+        
+        .transform-gpu {
+            transform: translateZ(0);
+            will-change: transform;
+        }
+        
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        #projectConstellation {
+            cursor: grab;
+        }
+        
+        #projectConstellation:active {
+            cursor: grabbing;
+        }
+        
+        .swiper-wrapper {
+            transition: transform 0.3s ease-out;
+        }
+        
+        @media (max-width: 768px) {
+            .project-card {
+                position: relative !important;
+                transform: none !important;
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+    </style>
+</body>
+</html>

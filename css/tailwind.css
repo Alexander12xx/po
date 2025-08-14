@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #00D4FF; /* electric-blue */
+  --color-primary-50: #E6F9FF; /* electric-blue-50 */
+  --color-primary-100: #CCF3FF; /* electric-blue-100 */
+  --color-primary-200: #99E7FF; /* electric-blue-200 */
+  --color-primary-300: #66DBFF; /* electric-blue-300 */
+  --color-primary-400: #33CFFF; /* electric-blue-400 */
+  --color-primary-500: #00D4FF; /* electric-blue-500 */
+  --color-primary-600: #00A3CC; /* electric-blue-600 */
+  --color-primary-700: #007299; /* electric-blue-700 */
+  --color-primary-800: #004166; /* electric-blue-800 */
+  --color-primary-900: #001033; /* electric-blue-900 */
+
+  /* Secondary Colors */
+  --color-secondary: #8B5CF6; /* neon-purple */
+  --color-secondary-50: #F3EFFF; /* neon-purple-50 */
+  --color-secondary-100: #E7DFFF; /* neon-purple-100 */
+  --color-secondary-200: #CFBFFF; /* neon-purple-200 */
+  --color-secondary-300: #B79FFF; /* neon-purple-300 */
+  --color-secondary-400: #9F7FFF; /* neon-purple-400 */
+  --color-secondary-500: #8B5CF6; /* neon-purple-500 */
+  --color-secondary-600: #6F4AC5; /* neon-purple-600 */
+  --color-secondary-700: #533894; /* neon-purple-700 */
+  --color-secondary-800: #372663; /* neon-purple-800 */
+  --color-secondary-900: #1B1432; /* neon-purple-900 */
+
+  /* Accent Colors */
+  --color-accent: #00FF88; /* cyber-green */
+  --color-accent-50: #E6FFEF; /* cyber-green-50 */
+  --color-accent-100: #CCFFDF; /* cyber-green-100 */
+  --color-accent-200: #99FFBF; /* cyber-green-200 */
+  --color-accent-300: #66FF9F; /* cyber-green-300 */
+  --color-accent-400: #33FF7F; /* cyber-green-400 */
+  --color-accent-500: #00FF88; /* cyber-green-500 */
+  --color-accent-600: #00CC6D; /* cyber-green-600 */
+  --color-accent-700: #009952; /* cyber-green-700 */
+  --color-accent-800: #006637; /* cyber-green-800 */
+  --color-accent-900: #00331C; /* cyber-green-900 */
+
+  /* Background Colors */
+  --color-background: #0A0A0F; /* deep-space */
+  --color-surface: #1A1A2E; /* subtle-elevation */
+  --color-surface-light: #2A2A3E; /* surface-light */
+  --color-surface-lighter: #3A3A4E; /* surface-lighter */
+
+  /* Text Colors */
+  --color-text-primary: #FFFFFF; /* white */
+  --color-text-secondary: #A0A0B8; /* text-secondary */
+  --color-text-muted: #808090; /* text-muted */
+  --color-text-disabled: #606070; /* text-disabled */
+
+  /* Status Colors */
+  --color-success: #00FF88; /* cyber-green */
+  --color-warning: #FFB800; /* warning-amber */
+  --color-error: #FF4757; /* error-red */
+
+  /* Warning Color Variants */
+  --color-warning-50: #FFF9E6; /* warning-50 */
+  --color-warning-100: #FFF3CC; /* warning-100 */
+  --color-warning-200: #FFE799; /* warning-200 */
+  --color-warning-300: #FFDB66; /* warning-300 */
+  --color-warning-400: #FFCF33; /* warning-400 */
+  --color-warning-500: #FFB800; /* warning-500 */
+  --color-warning-600: #CC9300; /* warning-600 */
+  --color-warning-700: #996E00; /* warning-700 */
+  --color-warning-800: #664900; /* warning-800 */
+  --color-warning-900: #332500; /* warning-900 */
+
+  /* Error Color Variants */
+  --color-error-50: #FFE8EA; /* error-50 */
+  --color-error-100: #FFD1D5; /* error-100 */
+  --color-error-200: #FFA3AB; /* error-200 */
+  --color-error-300: #FF7581; /* error-300 */
+  --color-error-400: #FF4757; /* error-400 */
+  --color-error-500: #FF1929; /* error-500 */
+  --color-error-600: #CC1421; /* error-600 */
+  --color-error-700: #990F19; /* error-700 */
+  --color-error-800: #660A11; /* error-800 */
+  --color-error-900: #330508; /* error-900 */
+
+  /* Shadow Variables */
+  --shadow-glow-primary: 0 4px 20px rgba(0, 212, 255, 0.15);
+  --shadow-glow-secondary: 0 4px 20px rgba(139, 92, 246, 0.15);
+  --shadow-glow-accent: 0 4px 20px rgba(0, 255, 136, 0.15);
+  --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --shadow-large: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+  /* Animation Variables */
+  --transition-fast: 150ms ease-out;
+  --transition-normal: 300ms ease-out;
+  --transition-slow: 500ms ease-out;
+}
+
+@layer base {
+*  {
+    
+  }
+  
+  body {
+    @apply bg-background text-text-primary font-inter antialiased;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-inter-display;
+  }
+
+  code, pre {
+    @apply font-jetbrains-mono;
+  }
+}
+
+@layer components {
+  .glow-primary {
+    box-shadow: var(--shadow-glow-primary);
+  }
+  
+  .glow-secondary {
+    box-shadow: var(--shadow-glow-secondary);
+  }
+  
+  .glow-accent {
+    box-shadow: var(--shadow-glow-accent);
+  }
+
+  .transition-smooth {
+    transition: all var(--transition-normal);
+  }
+
+  .transition-fast {
+    transition: all var(--transition-fast);
+  }
+
+  .transition-slow {
+    transition: all var(--transition-slow);
+  }
+}
+
+@layer utilities {
+  .text-gradient-primary {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-accent {
+    background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-cyber {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+  }
+
+  .border-gradient {
+    border: 1px solid transparent;
+    background: linear-gradient(var(--color-background), var(--color-background)) padding-box,
+                linear-gradient(135deg, var(--color-primary), var(--color-secondary)) border-box;
+  }
+}
