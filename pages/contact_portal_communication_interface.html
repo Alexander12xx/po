@@ -646,25 +646,54 @@
             progressBar.style.width = progress + '%';
             progressText.textContent = progress + '%';
         }
+//new form submission 
+function handleFormSubmission(e) {
+    e.preventDefault();
+    
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const email = document.getElementById('email').value;
+    const company = document.getElementById('company').value;
+    const projectType = document.getElementById('projectType').value;
+    const budget = document.getElementById('budget').value;
+    const timeline = document.getElementById('timeline').value;
+    const projectDescription = document.getElementById('projectDescription').value;
+
+    const message = `*New Project Inquiry*\n\n*First Name:* ${firstName}\n*Last Name:* ${lastName}\n*Email:* ${email}\n*Company:* ${company}\n*Project Type:* ${projectType}\n*Budget:* ${budget}\n*Timeline:* ${timeline}\n*Description:* ${projectDescription}`;
+    
+    const phoneNumber = '0706389206';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    // Show loading state
+    const submitBtn = document.getElementById('submitBtn');
+    const submitText = document.getElementById('submitText');
+    const submitLoader = document.getElementById('submitLoader');
+    
+    submitBtn.disabled = true;
+    submitText.textContent = 'Transmitting...';
+    submitLoader.classList.remove('hidden');
+
+    // Simulate a short delay before opening WhatsApp
+    setTimeout(() => {
+        // Open WhatsApp with the message
+        window.open(whatsappUrl, '_blank');
+
+        // Reset form
+        document.getElementById('contactForm').reset();
+        updateFormProgress();
+
+        // Reset button state
+        submitBtn.disabled = false;
+        submitText.textContent = 'Initialize Communication';
+        submitLoader.classList.add('hidden');
+    }, 2000); // Adjust the delay as needed
+}
+
+
 
         // Form Submission
-        function handleFormSubmission(e) {
-            e.preventDefault();
-            
-            const submitBtn = document.getElementById('submitBtn');
-            const submitText = document.getElementById('submitText');
-            const submitLoader = document.getElementById('submitLoader');
-            
-            // Show loading state
-            submitBtn.disabled = true;
-            submitText.textContent = 'Transmitting...';
-            submitLoader.classList.remove('hidden');
-            
-            // Simulate form submission
-            setTimeout(() => {
-                submitBtn.disabled = false;
-                submitText.textContent = 'Initialize Communication';
-                submitLoader.classList.add('hidden');
+  
+                
                 
                 // Show success modal
                 showSuccessModal();
