@@ -11,10 +11,8 @@
 <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Falexander6210back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
 </head>
 <body class="bg-background text-text-primary overflow-x-hidden">
-    <!-- Particle System Background -->
     <canvas id="particleCanvas" class="fixed inset-0 w-full h-full z-0 pointer-events-none"></canvas>
     
-    <!-- Floating Navigation -->
     <nav id="floatingNav" class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-out">
         <div class="bg-surface/20 backdrop-blur-md border border-primary/20 rounded-2xl px-6 py-3 shadow-glow-primary">
             <div class="flex items-center space-x-8">
@@ -30,7 +28,6 @@
                         Contact
                     </a>
                 </div>
-                <!-- Mobile Menu Button -->
                 <button id="mobileMenuBtn" class="md:hidden text-text-primary">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -40,7 +37,6 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
     <div id="mobileMenu" class="fixed inset-0 bg-background/95 backdrop-blur-lg z-40 opacity-0 pointer-events-none transition-all duration-300">
         <div class="flex flex-col items-center justify-center h-full space-y-8">
             <a href="neural_about_personal_story.html" class="text-2xl text-text-secondary hover:text-primary transition-fast">About</a>
@@ -53,7 +49,6 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center px-4 pt-24 z-10">
         <div class="max-w-7xl mx-auto w-full">
             <div class="text-center mb-16">
@@ -64,7 +59,6 @@
                     Initiate communication through our advanced interface. Real-time availability, intelligent project matching, and seamless collaboration await.
                 </p>
                 
-                <!-- Real-time Availability Status -->
                 <div class="inline-flex items-center bg-surface/30 backdrop-blur-sm border border-accent/30 rounded-full px-8 py-4 mb-12">
                     <div class="w-4 h-4 bg-accent rounded-full animate-pulse mr-4"></div>
                     <div class="text-left">
@@ -75,7 +69,6 @@
             </div>
 
             <div class="grid lg:grid-cols-3 gap-8">
-                <!-- Main Contact Form -->
                 <div class="lg:col-span-2">
                     <div class="bg-surface/30 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300">
                         <div class="flex items-center justify-between mb-8">
@@ -86,7 +79,6 @@
                             </div>
                         </div>
 
-                        <!-- Progress Indicator -->
                         <div class="mb-8">
                             <div class="flex items-center justify-between mb-2">
                                 <span class="text-sm text-text-secondary">Form Completion</span>
@@ -98,7 +90,6 @@
                         </div>
 
                         <form id="contactForm" class="space-y-6">
-                            <!-- Personal Information -->
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div class="floating-input-group">
                                     <input type="text" id="firstName" name="firstName" required class="floating-input peer w-full bg-transparent border-2 border-surface-light rounded-xl px-4 py-4 text-text-primary placeholder-transparent focus:border-primary focus:outline-none transition-fast" />
@@ -129,7 +120,6 @@
                                 </div>
                             </div>
 
-                            <!-- Project Details -->
                             <div class="floating-input-group">
                                 <select id="projectType" name="projectType" required class="floating-input peer w-full bg-transparent border-2 border-surface-light rounded-xl px-4 py-4 text-text-primary focus:border-primary focus:outline-none transition-fast">
                                     <option value disabled selected></option>
@@ -181,7 +171,6 @@
                                 </label>
                             </div>
 
-                            <!-- Technical Requirements -->
                             <div>
                                 <label class="block text-text-secondary font-medium mb-4">Technical Requirements</label>
                                 <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -212,7 +201,6 @@
                                 </div>
                             </div>
 
-                            <!-- Submit Button -->
                             <button type="submit" id="submitBtn" class="w-full bg-primary text-background py-4 rounded-xl font-semibold hover:bg-primary/90 transition-fast shadow-glow-primary disabled:opacity-50 disabled:cursor-not-allowed">
                                 <span id="submitText">Initialize Communication</span>
                                 <div id="submitLoader" class="hidden inline-block w-5 h-5 border-2 border-background/30 border-t-background rounded-full animate-spin ml-2"></div>
@@ -221,14 +209,11 @@
                     </div>
                 </div>
 
-                <!-- Communication Channels & Info -->
                 <div class="space-y-6">
-                    <!-- Direct Communication -->
                     <div class="bg-surface/30 backdrop-blur-sm border border-secondary/20 rounded-2xl p-6 hover:border-secondary/50 transition-all duration-300">
                         <h3 class="text-xl font-inter-display font-bold text-gradient-primary mb-6">Direct Channels</h3>
                         
                         <div class="space-y-4">
-                            <!-- Email -->
                             <a href="mailto:alexander@example.com" class="block group">
                                 <div class="flex items-center space-x-4 p-4 bg-surface/20 rounded-xl hover:bg-surface/40 transition-fast">
                                     <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-fast">
@@ -244,7 +229,6 @@
                                 </div>
                             </a>
 
-                            <!-- LinkedIn -->
                             <a href="https://linkedin.com/in/alexandermm" class="block group">
                                 <div class="flex items-center space-x-4 p-4 bg-surface/20 rounded-xl hover:bg-surface/40 transition-fast">
                                     <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center group-hover:bg-secondary/20 transition-fast">
@@ -260,7 +244,6 @@
                                 </div>
                             </a>
 
-                            <!-- Calendar Booking -->
                             <a href="javascript:void(0)" class="block group" onclick="openCalendarModal()">
                                 <div class="flex items-center space-x-4 p-4 bg-surface/20 rounded-xl hover:bg-surface/40 transition-fast">
                                     <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center group-hover:bg-accent/20 transition-fast">
@@ -278,7 +261,6 @@
                         </div>
                     </div>
 
-                    <!-- Project Compatibility Matrix -->
                     <div class="bg-surface/30 backdrop-blur-sm border border-accent/20 rounded-2xl p-6 hover:border-accent/50 transition-all duration-300">
                         <h3 class="text-xl font-inter-display font-bold text-gradient-accent mb-6">Compatibility Matrix</h3>
                         
@@ -322,7 +304,6 @@
                         </div>
                     </div>
 
-                    <!-- Response Time Info -->
                     <div class="bg-surface/30 backdrop-blur-sm border border-primary/20 rounded-2xl p-6">
                         <h3 class="text-lg font-inter-display font-bold mb-4">Response Timeline</h3>
                         <div class="space-y-3 text-sm">
@@ -345,7 +326,6 @@
         </div>
     </section>
 
-    <!-- Client Testimonials -->
     <section class="relative py-24 px-4 z-10">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
@@ -358,7 +338,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
                 <div class="bg-surface/30 backdrop-blur-sm border border-primary/20 rounded-2xl p-6 hover:border-primary/50 transition-all duration-300">
                     <div class="flex items-center mb-4">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
@@ -378,7 +357,6 @@
                     </div>
                 </div>
 
-                <!-- Testimonial 2 -->
                 <div class="bg-surface/30 backdrop-blur-sm border border-secondary/20 rounded-2xl p-6 hover:border-secondary/50 transition-all duration-300">
                     <div class="flex items-center mb-4">
                         <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
@@ -398,7 +376,6 @@
                     </div>
                 </div>
 
-                <!-- Testimonial 3 -->
                 <div class="bg-surface/30 backdrop-blur-sm border border-accent/20 rounded-2xl p-6 hover:border-accent/50 transition-all duration-300">
                     <div class="flex items-center mb-4">
                         <img src="https://images.pixabay.com/photo/2017/06/26/02/47/man-2442565_1280.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
@@ -421,7 +398,6 @@
         </div>
     </section>
 
-    <!-- Success Modal -->
     <div id="successModal" class="fixed inset-0 bg-background/80 backdrop-blur-lg z-60 opacity-0 pointer-events-none transition-all duration-300">
         <div class="flex items-center justify-center min-h-screen px-4">
             <div class="bg-surface/90 backdrop-blur-sm border border-accent/30 rounded-2xl p-8 max-w-md w-full transform scale-95 transition-all duration-300">
@@ -455,7 +431,6 @@
         </div>
     </div>
 
-    <!-- Calendar Modal -->
     <div id="calendarModal" class="fixed inset-0 bg-background/80 backdrop-blur-lg z-60 opacity-0 pointer-events-none transition-all duration-300">
         <div class="flex items-center justify-center min-h-screen px-4">
             <div class="bg-surface/90 backdrop-blur-sm border border-primary/30 rounded-2xl p-8 max-w-lg w-full transform scale-95 transition-all duration-300">
@@ -498,7 +473,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="relative py-16 px-4 border-t border-surface z-10">
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-3 gap-8 mb-8">
@@ -646,62 +620,57 @@
             progressBar.style.width = progress + '%';
             progressText.textContent = progress + '%';
         }
-//new form submission 
-function handleFormSubmission(e) {
-    e.preventDefault();
-    
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
-    const email = document.getElementById('email').value;
-    const company = document.getElementById('company').value;
-    const projectType = document.getElementById('projectType').value;
-    const budget = document.getElementById('budget').value;
-    const timeline = document.getElementById('timeline').value;
-    const projectDescription = document.getElementById('projectDescription').value;
 
-    const message = `*New Project Inquiry*\n\n*First Name:* ${firstName}\n*Last Name:* ${lastName}\n*Email:* ${email}\n*Company:* ${company}\n*Project Type:* ${projectType}\n*Budget:* ${budget}\n*Timeline:* ${timeline}\n*Description:* ${projectDescription}`;
-    
-    const phoneNumber = '0706389206';
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        // Form Submission to WhatsApp
+        function handleFormSubmission(e) {
+            e.preventDefault();
+            
+            const form = document.getElementById('contactForm');
+            const firstName = form.querySelector('#firstName').value;
+            const lastName = form.querySelector('#lastName').value;
+            const email = form.querySelector('#email').value;
+            const company = form.querySelector('#company').value;
+            const projectType = form.querySelector('#projectType').options[form.querySelector('#projectType').selectedIndex].text;
+            const budget = form.querySelector('#budget').options[form.querySelector('#budget').selectedIndex].text;
+            const timeline = form.querySelector('#timeline').options[form.querySelector('#timeline').selectedIndex].text;
+            const projectDescription = form.querySelector('#projectDescription').value;
+            
+            const techCheckboxes = form.querySelectorAll('input[name="tech[]"]:checked');
+            const technicalRequirements = Array.from(techCheckboxes).map(cb => cb.value).join(', ');
+            
+            // Format the message content
+            let message = `*New Project Inquiry from your website*\n\n`;
+            message += `*Name:* ${firstName} ${lastName}\n`;
+            message += `*Email:* ${email}\n`;
+            if (company) {
+                message += `*Company:* ${company}\n`;
+            }
+            message += `*Project Type:* ${projectType}\n`;
+            message += `*Budget Range:* ${budget}\n`;
+            message += `*Timeline:* ${timeline}\n\n`;
+            message += `*Project Description:*\n${projectDescription}\n\n`;
+            if (technicalRequirements) {
+                message += `*Technical Requirements:* ${technicalRequirements}\n`;
+            }
 
-    // Show loading state
-    const submitBtn = document.getElementById('submitBtn');
-    const submitText = document.getElementById('submitText');
-    const submitLoader = document.getElementById('submitLoader');
-    
-    submitBtn.disabled = true;
-    submitText.textContent = 'Transmitting...';
-    submitLoader.classList.remove('hidden');
+            // Phone number to submit to
+            const phoneNumber = '0706389206';
+            const countryCode = '+254'; // Assuming Kenya based on the number format
+            const formattedNumber = `${countryCode}${phoneNumber.substring(1)}`;
 
-    // Simulate a short delay before opening WhatsApp
-    setTimeout(() => {
-        // Open WhatsApp with the message
-        window.open(whatsappUrl, '_blank');
+            // Encode the message for a URL
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${formattedNumber}?text=${encodedMessage}`;
 
-        // Reset form
-        document.getElementById('contactForm').reset();
-        updateFormProgress();
-
-        // Reset button state
-        submitBtn.disabled = false;
-        submitText.textContent = 'Initialize Communication';
-        submitLoader.classList.add('hidden');
-    }, 2000); // Adjust the delay as needed
-}
-
-
-
-        // Form Submission
-  
-                
-                
-                // Show success modal
-                showSuccessModal();
-                
-                // Reset form
-                document.getElementById('contactForm').reset();
-                updateFormProgress();
-            }, 2000);
+            // Open the WhatsApp link
+            window.open(whatsappUrl, '_blank');
+            
+            // You can optionally show a success modal or message after opening the link
+            showSuccessModal();
+            
+            // Reset the form after submission
+            form.reset();
+            updateFormProgress();
         }
 
         // Modal Functions
