@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alexander  - Engineering Tomorrow's Web Today</title>
+    <meta name="description" content="Alexander Muinde - Full-Stack Developer crafting futuristic web experiences with cutting-edge technology and innovative design." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Falexander6210back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background text-text-primary overflow-x-hidden">
+    <!-- Particle System Background -->
+    <canvas id="particleCanvas" class="fixed inset-0 w-full h-full z-0 pointer-events-none"></canvas>
+    
+    <!-- Floating Navigation -->
+    <nav id="floatingNav" class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-out">
+        <div class="bg-surface/20 backdrop-blur-md border border-primary/20 rounded-2xl px-6 py-3 shadow-glow-primary">
+            <div class="flex items-center space-x-8">
+                <a href="quantum_landing_homepage.html" class="text-primary font-inter-display font-semibold text-lg">
+                    Alexander
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="neural_about_personal_story.html" class="text-text-secondary hover:text-primary transition-fast">About</a>
+                    <a href="project_constellation_portfolio_showcase.html" class="text-text-secondary hover:text-primary transition-fast">Projects</a>
+                    <a href="skill_nexus_technical_capabilities.html" class="text-text-secondary hover:text-primary transition-fast">Skills</a>
+                    <a href="innovation_vault_experimental_features.html" class="text-text-secondary hover:text-primary transition-fast">Lab</a>
+                    <a href="contact_portal_communication_interface.html" class="bg-primary text-background px-4 py-2 rounded-lg hover:bg-primary/90 transition-fast font-medium">
+                        Contact
+                    </a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-text-primary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-background/95 backdrop-blur-lg z-40 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="neural_about_personal_story.html" class="text-2xl text-text-secondary hover:text-primary transition-fast">About</a>
+            <a href="project_constellation_portfolio_showcase.html" class="text-2xl text-text-secondary hover:text-primary transition-fast">Projects</a>
+            <a href="skill_nexus_technical_capabilities.html" class="text-2xl text-text-secondary hover:text-primary transition-fast">Skills</a>
+            <a href="innovation_vault_experimental_features.html" class="text-2xl text-text-secondary hover:text-primary transition-fast">Lab</a>
+            <a href="contact_portal_communication_interface.html" class="bg-primary text-background px-6 py-3 rounded-lg text-xl font-medium">
+                Contact
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center px-4 z-10">
+        <div class="text-center max-w-4xl mx-auto">
+            <div class="mb-8">
+                <h1 class="text-6xl md:text-8xl font-inter-display font-bold text-gradient-primary mb-6">
+                    Alexander Muinde
+                </h1>
+                <div class="h-16 flex items-center justify-center">
+                    <p id="typewriter" class="text-xl md:text-2xl text-text-secondary font-inter"></p>
+                    <span id="cursor" class="text-primary text-xl md:text-2xl animate-pulse">|</span>
+                </div>
+            </div>
+            
+            <!-- Real-time Availability Indicator -->
+            <div class="inline-flex items-center bg-surface/30 backdrop-blur-sm border border-accent/30 rounded-full px-6 py-3 mb-12">
+                <div class="w-3 h-3 bg-accent rounded-full animate-pulse mr-3"></div>
+                <span class="text-accent font-medium">Available for new projects</span>
+                <span class="text-text-muted ml-2">• Updated Aug 2025</span>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="project_constellation_portfolio_showcase.html" class="bg-primary text-background px-8 py-4 rounded-xl font-semibold hover:bg-primary/90 transition-fast shadow-glow-primary">
+                    View My Work
+                </a>
+                <a href="contact_portal_communication_interface.html" class="border border-primary text-primary px-8 py-4 rounded-xl font-semibold hover:bg-primary/10 transition-fast">
+                    Let's Connect
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Skill Constellation -->
+    <section class="relative py-24 px-4 z-10">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-inter-display font-bold text-gradient-primary mb-6">
+                    Core Technologies
+                </h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+                    Mastering the tools that power tomorrow's digital experiences
+                </p>
+            </div>
+
+            <!-- Skill Constellation Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- React -->
+                <div class="skill-node group cursor-pointer">
+                    <div class="bg-surface/30 backdrop-blur-sm border border-primary/20 rounded-2xl p-6 text-center hover:border-primary/50 hover:shadow-glow-primary transition-all duration-300 hover:scale-105">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-fast">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-10 h-10" />
+                        </div>
+                        <h3 class="font-inter-display font-semibold text-lg mb-2">React</h3>
+                        <div class="w-full bg-surface rounded-full h-2">
+                            <div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+                        </div>
+                        <span class="text-sm text-text-muted mt-2 block">Expert</span>
+                    </div>
+                </div>
+
+                <!-- Node.js -->
+                <div class="skill-node group cursor-pointer">
+                    <div class="bg-surface/30 backdrop-blur-sm border border-accent/20 rounded-2xl p-6 text-center hover:border-accent/50 hover:shadow-glow-accent transition-all duration-300 hover:scale-105">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-accent/10 rounded-xl flex items-center justify-center group-hover:bg-accent/20 transition-fast">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="w-10 h-10" />
+                        </div>
+                        <h3 class="font-inter-display font-semibold text-lg mb-2">Node.js</h3>
+                        <div class="w-full bg-surface rounded-full h-2">
+                            <div class="bg-accent h-2 rounded-full" style="width: 90%"></div>
+                        </div>
+                        <span class="text-sm text-text-muted mt-2 block">Expert</span>
+                    </div>
+                </div>
+
+                <!-- Python -->
+                <div class="skill-node group cursor-pointer">
+                    <div class="bg-surface/30 backdrop-blur-sm border border-secondary/20 rounded-2xl p-6 text-center hover:border-secondary/50 hover:shadow-glow-secondary transition-all duration-300 hover:scale-105">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-secondary/10 rounded-xl flex items-center justify-center group-hover:bg-secondary/20 transition-fast">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-10 h-10" />
+                        </div>
+                        <h3 class="font-inter-display font-semibold text-lg mb-2">Python</h3>
+                        <div class="w-full bg-surface rounded-full h-2">
+                            <div class="bg-secondary h-2 rounded-full" style="width: 88%"></div>
+                        </div>
+                        <span class="text-sm text-text-muted mt-2 block">Advanced</span>
+                    </div>
+                </div>
+
+                <!-- TypeScript -->
+                <div class="skill-node group cursor-pointer">
+                    <div class="bg-surface/30 backdrop-blur-sm border border-primary/20 rounded-2xl p-6 text-center hover:border-primary/50 hover:shadow-glow-primary transition-all duration-300 hover:scale-105">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-fast">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="w-10 h-10" />
+                        </div>
+                        <h3 class="font-inter-display font-semibold text-lg mb-2">TypeScript</h3>
+                        <div class="w-full bg-surface rounded-full h-2">
+                            <div class="bg-primary h-2 rounded-full" style="width: 92%"></div>
+                        </div>
+                        <span class="text-sm text-text-muted mt-2 block">Expert</span>
+                    </div>
+                </div>
+
+                <!-- MongoDB -->
+                <div class="skill-node group cursor-pointer">
+                    <div class="bg-surface/30 backdrop-blur-sm border border-accent/20 rounded-2xl p-6 text-center hover:border-accent/50 hover:shadow-glow-accent transition-all duration-300 hover:scale-105">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-accent/10 rounded-xl flex items-center justify-center group-hover:bg-accent/20 transition-fast">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-10 h-10" />
+                        </div>
+                        <h3 class="font-inter-display font-semibold text-lg mb-2">MongoDB</h3>
+                        <div class="w-full bg-surface rounded-full h-2">
+                            <div class="bg-accent h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                        <span class="text-sm text-text-muted mt-2 block">Advanced</span>
+                    </div>
+                </div>
+
+                <!-- Docker -->
+                <div class="skill-node group cursor-pointer">
+                    <div class="bg-surface/30 backdrop-blur-sm border border-secondary/20 rounded-2xl p-6 text-center hover:border-secondary/50 hover:shadow-glow-secondary transition-all duration-300 hover:scale-105">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-secondary/10 rounded-xl flex items-center justify-center group-hover:bg-secondary/20 transition-fast">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="w-10 h-10" />
+                        </div>
+                        <h3 class="font-inter-display font-semibold text-lg mb-2">Docker</h3>
+                        <div class="w-full bg-surface rounded-full h-2">
+                            <div class="bg-secondary h-2 rounded-full" style="width: 80%"></div>
+                        </div>
+                        <span class="text-sm text-text-muted mt-2 block">Advanced</span>
+                    </div>
+                </div>
+
+                <!-- AWS -->
+                <div class="skill-node group cursor-pointer">
+                    <div class="bg-surface/30 backdrop-blur-sm border border-primary/20 rounded-2xl p-6 text-center hover:border-primary/50 hover:shadow-glow-primary transition-all duration-300 hover:scale-105">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-fast">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" class="w-10 h-10" />
+                        </div>
+                        <h3 class="font-inter-display font-semibold text-lg mb-2">AWS</h3>
+                        <div class="w-full bg-surface rounded-full h-2">
+                            <div class="bg-primary h-2 rounded-full" style="width: 78%"></div>
+                        </div>
+                        <span class="text-sm text-text-muted mt-2 block">Intermediate</span>
+                    </div>
+                </div>
+
+                <!-- GraphQL -->
+                <div class="skill-node group cursor-pointer">
+                    <div class="bg-surface/30 backdrop-blur-sm border border-accent/20 rounded-2xl p-6 text-center hover:border-accent/50 hover:shadow-glow-accent transition-all duration-300 hover:scale-105">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-accent/10 rounded-xl flex items-center justify-center group-hover:bg-accent/20 transition-fast">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" alt="GraphQL" class="w-10 h-10" />
+                        </div>
+                        <h3 class="font-inter-display font-semibold text-lg mb-2">GraphQL</h3>
+                        <div class="w-full bg-surface rounded-full h-2">
+                            <div class="bg-accent h-2 rounded-full" style="width: 82%"></div>
+                        </div>
+                        <span class="text-sm text-text-muted mt-2 block">Advanced</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="skill_nexus_technical_capabilities.html" class="inline-flex items-center text-primary hover:text-primary/80 transition-fast font-medium">
+                    Explore Full Tech Stack
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="relative py-24 px-4 z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-inter-display font-bold text-gradient-primary mb-6">
+                    Featured Projects
+                </h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+                    Showcasing innovative solutions that push the boundaries of web development
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1: E-Commerce Platform -->
+                <div class="group cursor-pointer">
+                    <div class="bg-surface/30 backdrop-blur-sm border border-primary/20 rounded-2xl overflow-hidden hover:border-primary/50 hover:shadow-glow-primary transition-all duration-500 hover:scale-105">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="E-Commerce Platform" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+                            <div class="absolute top-4 right-4 bg-accent/20 backdrop-blur-sm rounded-full px-3 py-1">
+                                <span class="text-accent text-sm font-medium">Live</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-inter-display font-bold text-xl mb-3 group-hover:text-primary transition-fast">
+                                NeoCommerce Platform
+                            </h3>
+                            <p class="text-text-secondary mb-4 line-clamp-3">
+                                Next-generation e-commerce platform with AI-powered recommendations, real-time inventory management, and seamless payment integration.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">React</span>
+                                <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Node.js</span>
+                                <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">MongoDB</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4 text-sm text-text-muted">
+                                    <span>⚡ 98% Performance</span>
+                                    <span>👥 10K+ Users</span>
+                                </div>
+                                <a href="project_constellation_portfolio_showcase.html" class="text-primary hover:text-primary/80 transition-fast font-medium">
+                                    View Case Study →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: AI Dashboard -->
+                <div class="group cursor-pointer">
+                    <div class="bg-surface/30 backdrop-blur-sm border border-secondary/20 rounded-2xl overflow-hidden hover:border-secondary/50 hover:shadow-glow-secondary transition-all duration-500 hover:scale-105">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="AI Analytics Dashboard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+                            <div class="absolute top-4 right-4 bg-secondary/20 backdrop-blur-sm rounded-full px-3 py-1">
+                                <span class="text-secondary text-sm font-medium">Beta</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-inter-display font-bold text-xl mb-3 group-hover:text-secondary transition-fast">
+                                AI Analytics Hub
+                            </h3>
+                            <p class="text-text-secondary mb-4 line-clamp-3">
+                                Intelligent data visualization platform with machine learning insights, predictive analytics, and real-time monitoring capabilities.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">Python</span>
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">React</span>
+                                <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">TensorFlow</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4 text-sm text-text-muted">
+                                    <span>🤖 AI-Powered</span>
+                                    <span>📊 Real-time</span>
+                                </div>
+                                <a href="project_constellation_portfolio_showcase.html" class="text-secondary hover:text-secondary/80 transition-fast font-medium">
+                                    View Case Study →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Blockchain App -->
+                <div class="group cursor-pointer">
+                    <div class="bg-surface/30 backdrop-blur-sm border border-accent/20 rounded-2xl overflow-hidden hover:border-accent/50 hover:shadow-glow-accent transition-all duration-500 hover:scale-105">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.pixabay.com/photo/2018/01/18/07/31/bitcoin-3089728_1280.jpg" alt="Blockchain Application" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+                            <div class="absolute top-4 right-4 bg-accent/20 backdrop-blur-sm rounded-full px-3 py-1">
+                                <span class="text-accent text-sm font-medium">New</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-inter-display font-bold text-xl mb-3 group-hover:text-accent transition-fast">
+                                DeFi Trading Platform
+                            </h3>
+                            <p class="text-text-secondary mb-4 line-clamp-3">
+                                Decentralized finance platform with smart contract integration, automated trading algorithms, and secure wallet connectivity.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Solidity</span>
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Web3.js</span>
+                                <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">Next.js</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4 text-sm text-text-muted">
+                                    <span>🔐 Secure</span>
+                                    <span>⚡ Fast Trades</span>
+                                </div>
+                                <a href="project_constellation_portfolio_showcase.html" class="text-accent hover:text-accent/80 transition-fast font-medium">
+                                    View Case Study →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="project_constellation_portfolio_showcase.html" class="bg-primary text-background px-8 py-4 rounded-xl font-semibold hover:bg-primary/90 transition-fast shadow-glow-primary">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative py-16 px-4 border-t border-surface z-10">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="font-inter-display font-bold text-xl text-gradient-primary mb-4">Alexander</h3>
+                    <p class="text-text-secondary mb-4">Engineering tomorrow's web experiences with cutting-edge technology and innovative design.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com" class="text-text-muted hover:text-primary transition-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com" class="text-text-muted hover:text-primary transition-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com" class="text-text-muted hover:text-primary transition-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-inter-display font-semibold text-lg mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="neural_about_personal_story.html" class="block text-text-secondary hover:text-primary transition-fast">About Me</a>
+                        <a href="project_constellation_portfolio_showcase.html" class="block text-text-secondary hover:text-primary transition-fast">Portfolio</a>
+                        <a href="skill_nexus_technical_capabilities.html" class="block text-text-secondary hover:text-primary transition-fast">Skills</a>
+                        <a href="innovation_vault_experimental_features.html" class="block text-text-secondary hover:text-primary transition-fast">Lab</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-inter-display font-semibold text-lg mb-4">Get In Touch</h4>
+                    <div class="space-y-2 text-text-secondary">
+                        <p>Ready to build something amazing?</p>
+                        <a href="contact_portal_communication_interface.html" class="inline-block bg-primary text-background px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-fast">
+                            Start a Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-surface pt-8 text-center text-text-muted">
+                <p>&copy; 2025 Alexander. All rights reserved. Crafted with passion and precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Particle System
+        class ParticleSystem {
+            constructor() {
+                this.canvas = document.getElementById('particleCanvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.particles = [];
+                this.mouse = { x: 0, y: 0 };
+                this.init();
+            }
+
+            init() {
+                this.resize();
+                this.createParticles();
+                this.bindEvents();
+                this.animate();
+            }
+
+            resize() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+            }
+
+            createParticles() {
+                const particleCount = Math.min(100, Math.floor(window.innerWidth / 20));
+                for (let i = 0; i < particleCount; i++) {
+                    this.particles.push({
+                        x: Math.random() * this.canvas.width,
+                        y: Math.random() * this.canvas.height,
+                        vx: (Math.random() - 0.5) * 0.5,
+                        vy: (Math.random() - 0.5) * 0.5,
+                        size: Math.random() * 3 + 1,
+                        color: Math.random() > 0.5 ? '#00D4FF' : '#8B5CF6',
+                        opacity: Math.random() * 0.5 + 0.2
+                    });
+                }
+            }
+
+            bindEvents() {
+                window.addEventListener('resize', () => this.resize());
+                window.addEventListener('mousemove', (e) => {
+                    this.mouse.x = e.clientX;
+                    this.mouse.y = e.clientY;
+                });
+            }
+
+            animate() {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                this.particles.forEach(particle => {
+                    // Mouse interaction
+                    const dx = this.mouse.x - particle.x;
+                    const dy = this.mouse.y - particle.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 100) {
+                        const force = (100 - distance) / 100;
+                        particle.vx += dx * force * 0.0001;
+                        particle.vy += dy * force * 0.0001;
+                    }
+
+                    // Update position
+                    particle.x += particle.vx;
+                    particle.y += particle.vy;
+
+                    // Boundary check
+                    if (particle.x < 0 || particle.x > this.canvas.width) particle.vx *= -1;
+                    if (particle.y < 0 || particle.y > this.canvas.height) particle.vy *= -1;
+
+                    // Draw particle
+                    this.ctx.beginPath();
+                    this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                    this.ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
+                    this.ctx.fill();
+
+                    // Draw connections
+                    this.particles.forEach(otherParticle => {
+                        const dx = particle.x - otherParticle.x;
+                        const dy = particle.y - otherParticle.y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+
+                        if (distance < 80) {
+                            this.ctx.beginPath();
+                            this.ctx.moveTo(particle.x, particle.y);
+                            this.ctx.lineTo(otherParticle.x, otherParticle.y);
+                            this.ctx.strokeStyle = `rgba(0, 212, 255, ${0.1 * (1 - distance / 80)})`;
+                            this.ctx.stroke();
+                        }
+                    });
+                });
+
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+
+        // Typewriter Effect
+        class TypeWriter {
+            constructor(element, texts, speed = 100) {
+                this.element = element;
+                this.texts = texts;
+                this.speed = speed;
+                this.textIndex = 0;
+                this.charIndex = 0;
+                this.isDeleting = false;
+                this.type();
+            }
+
+            type() {
+                const currentText = this.texts[this.textIndex];
+                
+                if (this.isDeleting) {
+                    this.element.textContent = currentText.substring(0, this.charIndex - 1);
+                    this.charIndex--;
+                } else {
+                    this.element.textContent = currentText.substring(0, this.charIndex + 1);
+                    this.charIndex++;
+                }
+
+                let typeSpeed = this.speed;
+
+                if (this.isDeleting) {
+                    typeSpeed /= 2;
+                }
+
+                if (!this.isDeleting && this.charIndex === currentText.length) {
+                    typeSpeed = 2000;
+                    this.isDeleting = true;
+                } else if (this.isDeleting && this.charIndex === 0) {
+                    this.isDeleting = false;
+                    this.textIndex = (this.textIndex + 1) % this.texts.length;
+                    typeSpeed = 500;
+                }
+
+                setTimeout(() => this.type(), typeSpeed);
+            }
+        }
+
+        // Navigation Scroll Effect
+        function handleNavigation() {
+            const nav = document.getElementById('floatingNav');
+            let lastScrollY = window.scrollY;
+
+            window.addEventListener('scroll', () => {
+                const currentScrollY = window.scrollY;
+                
+                if (currentScrollY > 100) {
+                    nav.style.transform = 'translateX(-50%) translateY(-10px)';
+                    nav.style.opacity = '0.95';
+                } else {
+                    nav.style.transform = 'translateX(-50%) translateY(0)';
+                    nav.style.opacity = '1';
+                }
+
+                lastScrollY = currentScrollY;
+            });
+        }
+
+        // Mobile Menu
+        function initMobileMenu() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('opacity-0')) {
+                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.add('opacity-100');
+                } else {
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.remove('opacity-100');
+                }
+            });
+
+            // Close menu when clicking on links
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.remove('opacity-100');
+                }
+            });
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new ParticleSystem();
+            new TypeWriter(
+                document.getElementById('typewriter'),
+                [
+                    'Engineering Tomorrow\'s Web Today',
+                    'Full-Stack Developer & Digital Architect',
+                    'Crafting Immersive Digital Experiences',
+                    'Building the Future, One Line at a Time'
+                ],
+                80
+            );
+            handleNavigation();
+            initMobileMenu();
+        });
+    </script>
+</body>
+</html>
